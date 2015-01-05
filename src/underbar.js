@@ -203,7 +203,7 @@
     var iter = iterator || _.identity;
     
     return _.reduce(collection, function(prev, curr) {
-      return prev && Boolean(iterator? iterator(curr) : curr); }, true);
+      return prev && Boolean(iter(curr)); }, true);
   };
 
   // Determine whether any of the elements pass a truth test. If no iterator is
